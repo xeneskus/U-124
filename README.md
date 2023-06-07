@@ -1,1 +1,3 @@
-# U-124
+# TAKIM İSMİ
+U-124
+# ÜRÜN İLE İLGİLİ BİLGİLER
