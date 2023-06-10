@@ -26,6 +26,8 @@ public class PlayerMovements : MonoBehaviour
 
     Rigidbody rb;
 
+    public Animator _handAnim;
+
 
     void Start()
     {
@@ -66,6 +68,11 @@ public class PlayerMovements : MonoBehaviour
         else
         {
             rb.drag = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            _handAnim.SetTrigger("deneme");
         }
 
     }
