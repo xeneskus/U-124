@@ -54,7 +54,21 @@ public class PlayerMovements : MonoBehaviour
             Invoke("ResetJump", jumpCooldown);
         }
 
-        
+        AnimatorStateInfo currentAnimationState = _handAnim.GetCurrentAnimatorStateInfo(0);
+        if (Input.GetMouseButtonDown(0) && currentAnimationState.IsName("shotgun"))
+        {
+            RaycastHit fireHit;
+            Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            if (Physics.Raycast(fireRay, out fireHit))
+            {
+                if (fireHit.transform.gameObject.tag == "Enemy")
+                {
+                    fireHit.transform.gameObject.SetActive(false);
+                }
+            }
+
+        }
+
 
         SpeedController();
 
@@ -75,6 +89,7 @@ public class PlayerMovements : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             _handAnim.SetTrigger("deneme");
+
         }
 
     }
@@ -116,4 +131,5 @@ public class PlayerMovements : MonoBehaviour
     {
         canJump = true;
     }
+
 }
