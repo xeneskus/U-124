@@ -54,6 +54,8 @@ public class PlayerMovements : MonoBehaviour
             Invoke("ResetJump", jumpCooldown);
         }
 
+        
+
         SpeedController();
 
         //hoplayabilcenmi ona bakim
