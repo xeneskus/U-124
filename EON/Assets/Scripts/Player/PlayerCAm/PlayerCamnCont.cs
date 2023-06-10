@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class PlayerCamnCont : MonoBehaviour
@@ -18,12 +19,11 @@ public class PlayerCamnCont : MonoBehaviour
     }
 
 
-    private void Update()
+ 
+    private void LateUpdate()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * _xSens;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * _ySens;
-
-
 
         yRotation += mouseX;
         xRotation -= mouseY;
