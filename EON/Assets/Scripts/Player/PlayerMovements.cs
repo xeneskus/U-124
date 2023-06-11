@@ -12,6 +12,9 @@ public class PlayerMovements : MonoBehaviour
     public float jumpForce, jumpCooldown, airMultiplier;
     bool canJump = true;
 
+    //KnockBack
+    public float knockBackStrength;
+
 
     [Header("Graund islemleri iste ya pff")]
     public float playerHeight;
@@ -55,6 +58,7 @@ public class PlayerMovements : MonoBehaviour
         }
 
         AnimatorStateInfo currentAnimationState = _handAnim.GetCurrentAnimatorStateInfo(0);
+
         if (Input.GetMouseButtonDown(0) && currentAnimationState.IsName("shotgun"))
         {
             RaycastHit fireHit;
@@ -63,7 +67,17 @@ public class PlayerMovements : MonoBehaviour
             {
                 if (fireHit.transform.gameObject.tag == "Enemy")
                 {
-                    fireHit.transform.gameObject.SetActive(false);
+                    if (fireHit.transform.gameObject.GetComponent<Rigidbody>() == null) { Destroy(fireHit.transform.gameObject); }
+                    else
+                    {
+                        Vector3 knockDirection = fireHit.transform.position - transform.position;
+                        knockDirection.y = 0;
+
+                        Rigidbody enemyRb = fireHit.transform.gameObject.GetComponent<Rigidbody>();
+                        enemyRb.AddForce(knockDirection.normalized * knockBackStrength, ForceMode.Impulse);
+                    }
+
+                    
                 }
             }
 
