@@ -39,7 +39,6 @@ public class PlayerMovements : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-        currentAnimationState = _handAnim.GetCurrentAnimatorStateInfo(0);
     }
 
     void Update()
@@ -107,7 +106,6 @@ public class PlayerMovements : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             _handAnim.SetTrigger("deneme");
-
         }
 
     }
