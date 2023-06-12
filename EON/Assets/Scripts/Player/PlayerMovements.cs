@@ -33,11 +33,13 @@ public class PlayerMovements : MonoBehaviour
 
     private int ShotgunBullet = 2;
 
+    
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        currentAnimationState = _handAnim.GetCurrentAnimatorStateInfo(0);
     }
 
     void Update()
@@ -60,14 +62,12 @@ public class PlayerMovements : MonoBehaviour
         }
 
         if (ShotgunBullet <= 0) { _handAnim.SetTrigger("Srelo"); ShotgunBullet = 2; }
-        print(ShotgunBullet);
+
         AnimatorStateInfo currentAnimationState = _handAnim.GetCurrentAnimatorStateInfo(0);
-        
         if (Input.GetMouseButtonDown(0) && currentAnimationState.IsName("shotgun") && ShotgunBullet > 0)
         {
             ShotgunBullet--;
             
-
             RaycastHit fireHit;
             Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             if (Physics.Raycast(fireRay, out fireHit))
@@ -82,12 +82,9 @@ public class PlayerMovements : MonoBehaviour
 
                         Rigidbody enemyRb = fireHit.transform.gameObject.GetComponent<Rigidbody>();
                         enemyRb.AddForce(knockDirection.normalized * knockBackStrength, ForceMode.Impulse);
-                    }
-
-                    
+                    }            
                 }
             }
-
         }
 
 
