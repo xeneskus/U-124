@@ -31,6 +31,8 @@ public class PlayerMovements : MonoBehaviour
 
     public Animator _handAnim;
 
+    private int ShotgunBullet = 2;
+
 
     void Start()
     {
@@ -57,10 +59,15 @@ public class PlayerMovements : MonoBehaviour
             Invoke("ResetJump", jumpCooldown);
         }
 
+        if (ShotgunBullet <= 0) { _handAnim.SetTrigger("Srelo"); ShotgunBullet = 2; }
+        print(ShotgunBullet);
         AnimatorStateInfo currentAnimationState = _handAnim.GetCurrentAnimatorStateInfo(0);
-
-        if (Input.GetMouseButtonDown(0) && currentAnimationState.IsName("shotgun"))
+        
+        if (Input.GetMouseButtonDown(0) && currentAnimationState.IsName("shotgun") && ShotgunBullet > 0)
         {
+            ShotgunBullet--;
+            
+
             RaycastHit fireHit;
             Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             if (Physics.Raycast(fireRay, out fireHit))
@@ -145,5 +152,12 @@ public class PlayerMovements : MonoBehaviour
     {
         canJump = true;
     }
+
+    public void ShotgunReload()
+    {
+        _handAnim.SetTrigger("Srelo");
+        //ShotgunBullet = 2;
+    }
+  
 
 }
