@@ -33,7 +33,10 @@ public class PlayerMovements : MonoBehaviour
 
     private int ShotgunBullet = 2;
 
-    
+    //fire effect
+    public ParticleSystem muzzleFlash;
+    public ParticleSystem hitEffect;
+
 
     void Start()
     {
@@ -66,11 +69,15 @@ public class PlayerMovements : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && currentAnimationState.IsName("shotgun") && ShotgunBullet > 0)
         {
             ShotgunBullet--;
-            
+            muzzleFlash.Emit(1);
             RaycastHit fireHit;
             Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             if (Physics.Raycast(fireRay, out fireHit))
             {
+                hitEffect.transform.position = fireHit.point;
+                hitEffect.transform.forward = fireHit.normal;
+                hitEffect.Emit(15);
+                //Debug.DrawLine(muzzleFlash.transform.position, fireHit.transform.position, Color.red, 1f);
                 if (fireHit.transform.gameObject.tag == "Enemy")
                 {
                     if (fireHit.transform.gameObject.GetComponent<Rigidbody>() == null) { Destroy(fireHit.transform.gameObject); }
