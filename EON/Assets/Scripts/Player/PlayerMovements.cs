@@ -36,7 +36,8 @@ public class PlayerMovements : MonoBehaviour
     //fire effect
     public ParticleSystem muzzleFlash;
     public ParticleSystem hitEffect;
-
+    public TrailRenderer tracerEffect;
+    public Transform tracerStartPoint;
 
     void Start()
     {
@@ -72,11 +73,17 @@ public class PlayerMovements : MonoBehaviour
             muzzleFlash.Emit(1);
             RaycastHit fireHit;
             Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            var tracer = Instantiate(tracerEffect, tracerStartPoint.position, Quaternion.identity);
+            tracer.AddPosition(tracerStartPoint.position);
+
             if (Physics.Raycast(fireRay, out fireHit))
             {
+                
                 hitEffect.transform.position = fireHit.point;
                 hitEffect.transform.forward = fireHit.normal;
                 hitEffect.Emit(15);
+
+                tracer.transform.position = fireHit.point;
                 //Debug.DrawLine(muzzleFlash.transform.position, fireHit.transform.position, Color.red, 1f);
                 if (fireHit.transform.gameObject.tag == "Enemy")
                 {

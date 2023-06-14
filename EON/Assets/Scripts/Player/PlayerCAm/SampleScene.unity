@@ -2144,6 +2144,9 @@ MonoBehaviour:
   _handAnim: {fileID: 93361340}
   muzzleFlash: {fileID: 198000012699958395}
   hitEffect: {fileID: 4856794185540329835}
+  tracerEffect: {fileID: 4445902086442376407, guid: 3c01e746cae778843814d6cf52bc64f3,
+    type: 3}
+  tracerStartPoint: {fileID: 1717686215}
 --- !u!54 &545562756
 Rigidbody:
   m_ObjectHideFlags: 0
