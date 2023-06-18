@@ -750,7 +750,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 4
+  m_StoppingDistance: 15
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -772,7 +772,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 465679695}
   playerObj: {fileID: 1418506103}
-  rangeToExplode: 0
+  bombObj: {fileID: 941992399472600423, guid: baea7d14cbeb4c74998a79f22384173e, type: 3}
+  alreadyAttacked: 0
+  timeBetweenAttacks: 1
+  bulletSpeedX: 10
+  bulletSpeedY: 10
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1344,7 +1348,7 @@ GameObject:
   - component: {fileID: 1418506106}
   - component: {fileID: 1418506105}
   - component: {fileID: 1418506104}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1819,7 +1823,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2084518544}
   - component: {fileID: 2084518547}
-  - component: {fileID: 2084518546}
+  - component: {fileID: 2084518548}
   - component: {fileID: 2084518545}
   m_Layer: 0
   m_Name: drone
@@ -1857,21 +1861,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2084518546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2084518543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de61c6be370bcee46b15d5b3c033f441, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 2084518547}
-  playerObj: {fileID: 1418506103}
-  rangeToExplode: 0
 --- !u!195 &2084518547
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1894,3 +1883,22 @@ NavMeshAgent:
   m_BaseOffset: 3
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2084518548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084518543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848f4d794de522141be9dddcee7d2b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 2084518547}
+  playerObj: {fileID: 1418506103}
+  bulletObj: {fileID: 1625488273408412451, guid: 3bd018ffc563aeb43ba10c011c2c2911,
+    type: 3}
+  alreadyAttacked: 0
+  timeBetweenAttacks: 1
+  bulletSpeed: 10
