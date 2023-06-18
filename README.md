@@ -31,10 +31,11 @@ https://trello.com/b/G0wkneiy/backlog
 - Discord üzerinden ilk toplantı yapıldı.
 - Takım adı, oyun adı ve oyun türü kararlaştırıldı.
 - Görev dağılımı yapıldı.
-- SPRİNT İÇİNDE TAMAMLANMASI TAHMİN EDİLEN PUAN: 100 Puan
-- PUAN TAMAMLAMA MANTIĞI: Toplamda proje boyunca tamamlanması gereken 360 puanlık Backlog bulunmaktadır. 3 Sprint'e bölündüğünde ilk Sprint'in en azından 100 ile başlaması gerektiğine karar verildi. 
-- USER STORYLER: Product Backlog'ların içine yazılmıştır. Hangi görevi kimin veya kimlerin yapacağı Backlog'larda belirtilmiştir.
-- BACKLOG DÜZENİ VE STORY SEÇİMLERİ: Backlog'umuz tüm sprintlere göre düzenlenmiştir ancak gün geçtikçe detaylandırılacak ve kimin hangi görevi üstlendiği daha net anlaşılacaktır. Şu an için 1. Sprint'te tamamlananlar Backlog'umuzda bulunmaktadır. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
-- 
+- Toplantıların çoğunun zamansal sebeplerden dolayı Whatsapp üzerinden yapılmasına karar verildi.
+- Karakterlerin temel hareketleri oluşturuldu.
+- **SPRİNT İÇİNDE TAMAMLANMASI TAHMİN EDİLEN PUAN:** 100 Puan
+- **PUAN TAMAMLAMA MANTIĞI:** Toplamda proje boyunca tamamlanması gereken 360 puanlık Backlog bulunmaktadır. 3 Sprint'e bölündüğünde ilk Sprint'in en azından 100 ile başlaması gerektiğine karar verildi. 1. Sprint'te tamamlanması gereken görevlerin puanları, Backlog görevlerinin açıklama kısmında belirtilmiştir.
+- **USER STORYLER:** Product Backlog'ların içine yazılmıştır. Hangi görevi kimin veya kimlerin yapacağı Backlog'larda belirtilmiştir. 2 ve 3. Sprintlerdeki görev dağılımı bahsedilen Sprintlerin 'Sprint Planning' kısmında yapılacağından çoğunluğu henüz belirlenmemiştir. 
+- **BACKLOG DÜZENİ VE STORY SEÇİMLERİ:** Backlog'umuz tüm sprintlere göre düzenlenmiştir ancak gün geçtikçe detaylandırılacak ve kimin hangi görevi üstlendiği daha net anlaşılacaktır. Şu an için 1. Sprint'te tamamlananlar Backlog'umuzda bulunmaktadır. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
 
