@@ -31,6 +31,7 @@ https://trello.com/b/G0wkneiy/backlog
 - Discord üzerinden ilk toplantı yapıldı.
 - Takım adı, oyun adı ve oyun türü kararlaştırıldı.
 - Görev dağılımı yapıldı.
+- İlk toplantılarımızda aldığımız kararlar, 1. Sprint Buluşmasından topladığımız bilgiler ve kullanmayı planladığımız assetleri burada topladık: https://drive.google.com/drive/folders/1Qd2_-fmONLAA3M5KgsOHYwfV5sC-r-Ic?usp=drive_link 
 - Toplantıların çoğunun zamansal sebeplerden dolayı Whatsapp üzerinden yapılmasına karar verildi.
 - Karakterlerin temel hareketleri oluşturuldu.
 - **SPRİNT İÇİNDE TAMAMLANMASI TAHMİN EDİLEN PUAN:** 100 Puan
