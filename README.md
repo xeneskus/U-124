@@ -45,5 +45,9 @@ https://trello.com/b/G0wkneiy/backlog
 - Daily Scrum toplantısı örneği pdf olarak Readme'de tarafımızdan paylaşılmaktadır: 
 [Sprint1 DailyScrum.pdf](https://github.com/xeneskus/U-124/files/11782581/Sprint1.DailyScrum.pdf)
 
-- **SPRİNT BOARD UPDATE:** Sprint Board Screenshotı: ![image](https://github.com/xeneskus/U-124/assets/129379714/4c543576-e3a1-485d-a927-07e960837e8f)
+- **SPRİNT BOARD UPDATE:** Sprint Board Ekran Görüntüsü: ![image](https://github.com/xeneskus/U-124/assets/129379714/4c543576-e3a1-485d-a927-07e960837e8f)
+- **Ürün Durumu:** Şu ana kadar yapılan çalışmalardan örnek bir video tarafımızdan paylaşılmaktadır. Değiştirilme, ekleme yapılma, çıkarılma ihtimalleri bulunmaktadır.
+https://github.com/xeneskus/U-124/assets/129379714/ffbd4990-7c59-47b6-8014-a3eb4b1062c3
+
+
 
