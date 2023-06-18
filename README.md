@@ -39,4 +39,5 @@ https://trello.com/b/G0wkneiy/backlog
 - **BACKLOG DÜZENİ VE STORY SEÇİMLERİ:** Backlog'umuz tüm sprintlere göre düzenlenmiştir ancak gün geçtikçe detaylandırılacak ve kimin hangi görevi üstlendiği daha net anlaşılacaktır. Şu an için 1. Sprint'te tamamlananlar Backlog'umuzda bulunmaktadır. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
 ## DAİLY SCRUM
-Daily Scrum toplantılarının çoğunun zamansal sebeplerden dolayı Whatsapp üzerinden, bir kısmının ise Discord üzerinden yapılmasına karar verilmiştir.
+- Daily Scrum toplantılarının çoğunun zamansal sebeplerden dolayı Whatsapp üzerinden yapılmasına karar verilmiştir.
+- Daily Scrum toplantısı örneği pdf olarak Readme'de tarafımızdan paylaşılmaktadır: 
