@@ -25,3 +25,13 @@ Dünya’yı ele geçiren yapay zekadan kaçarak uzaya giden bir insanlıktan ge
 - Cyberpunk oyunu sevenler
 ## Product Backlog URL
 https://trello.com/b/G0wkneiy/backlog
+
+# SPRİNT NOTLARI
+## SPRİNT 1
+- Discord üzerinden ilk toplantı yapıldı.
+- Takım adı, oyun adı ve oyun türü kararlaştırıldı.
+- Görev dağılımı yapıldı.
+- USER STORYLER: Product Backlog'ların içine yazılmıştır. Hangi görevi kimin veya kimlerin yapacağı Backlog'larda belirtilmiştir.
+- BACKLOG DÜZENİ VE STORY SEÇİMLERİ: Backlog'umuz tüm sprintlere göre düzenlenmiştir ancak gün geçtikçe detaylandırılacaktır. Şu an için 1. Sprint'te tamamlananlar Backlog'umuzda bulunmaktadır. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
+
+
