@@ -41,3 +41,4 @@ https://trello.com/b/G0wkneiy/backlog
 ## DAİLY SCRUM
 - Daily Scrum toplantılarının çoğunun zamansal sebeplerden dolayı Whatsapp üzerinden yapılmasına karar verilmiştir.
 - Daily Scrum toplantısı örneği pdf olarak Readme'de tarafımızdan paylaşılmaktadır: 
+[Sprint1 DailyScrum.pdf](https://github.com/xeneskus/U-124/files/11782581/Sprint1.DailyScrum.pdf)
