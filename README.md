@@ -40,7 +40,7 @@ https://trello.com/b/G0wkneiy/backlog
 - Hangi görevi kimin veya kimlerin yapacağı Backlog'larda belirtilmiştir. 2 ve 3. Sprintlerdeki görev dağılımı bahsedilen Sprintlerin 'Sprint Planning' kısmında yapılacağından çoğunluğu henüz belirlenmemiştir. 
 - **BACKLOG DÜZENİ VE STORY SEÇİMLERİ:** Backlog'umuz tüm sprintlere göre düzenlenmiştir ancak gün geçtikçe detaylandırılacak ve kimin hangi görevi üstlendiği daha net anlaşılacaktır. Şu an için 1. Sprint'te tamamlananlar Backlog'umuzda bulunmaktadır. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
 
-## DAİLY SCRUM
+## DAILY SCRUM
 - Daily Scrum toplantılarının çoğunun zamansal sebeplerden dolayı Whatsapp üzerinden yapılmasına karar verilmiştir.
 - Daily Scrum toplantısı örneği pdf olarak Readme'de tarafımızdan paylaşılmaktadır: 
 [Sprint1 DailyScrum.pdf](https://github.com/xeneskus/U-124/files/11782581/Sprint1.DailyScrum.pdf)
@@ -48,6 +48,8 @@ https://trello.com/b/G0wkneiy/backlog
 - **SPRİNT BOARD UPDATE:** Sprint Board Ekran Görüntüsü: ![image](https://github.com/xeneskus/U-124/assets/129379714/4c543576-e3a1-485d-a927-07e960837e8f)
 - **Ürün Durumu:** Şu ana kadar yapılan çalışmalardan örnek bir video tarafımızdan paylaşılmaktadır. Değiştirilme, ekleme yapılma, çıkarılma ihtimalleri bulunmaktadır.
 https://github.com/xeneskus/U-124/assets/129379714/ffbd4990-7c59-47b6-8014-a3eb4b1062c3
-
+- **SPRİNT REVIEW:** </br> ALINAN KARARLAR: Belirlenen görev dağılımlarının aynı şekilde devam etmesine karar verilmiştir. Product Owner ve Scrum Master'ın da oyun tasarımı ve kod yazmada yardımcı olmasına karar verilmiştir. </br> 
+SPRİNT REVİEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, Enes Kuş, Oğuzhan Öztürk. 
+- **SPRİNT RETROSPECTIVE:** Sınav dönemi olduğundan zamanımızın tamamını kullanamadığımız kanısına varıldı. Diğer sprintlerde zamanı daha verimli ve daha fazla kullanma kararı verildi.
 
 
