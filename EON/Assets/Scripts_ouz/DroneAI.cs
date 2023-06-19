@@ -16,7 +16,7 @@ public class DroneAI : MonoBehaviour
 
     void Start()
     {
-        
+        playerObj = FindObjectOfType<PlayerMovements>().gameObject;
     }
 
     // Update is called once per frame

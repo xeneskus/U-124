@@ -18,6 +18,7 @@ public class SpiderAI : MonoBehaviour
 
     private void Awake()
     {
+        playerObj = FindObjectOfType<PlayerMovements>().gameObject;
         agent = this.GetComponent<NavMeshAgent>();
     }
     private void Update()
