@@ -12,7 +12,7 @@ public class PlayerVar : MonoBehaviour
         curHealth = maxHealth;
     }
 
-    public void TakeDamaga(int dmg)
+    public void TakeDamage(int dmg)
     {
         curHealth -= dmg;
     }

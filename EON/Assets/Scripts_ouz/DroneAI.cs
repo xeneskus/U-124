@@ -40,6 +40,7 @@ public class DroneAI : MonoBehaviour
             //bullet spawn & move
             Rigidbody rb = Instantiate(bulletObj, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * bulletSpeed, ForceMode.Impulse);
+            rb.AddForce(transform.up * 2, ForceMode.Impulse);   
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);

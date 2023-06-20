@@ -15,12 +15,5 @@ public class DroneBullet : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == 7)
-        {
-            Debug.Log("oyuncuya vurdun! anneni vurdun");
-            Destroy(gameObject);
-        }
-    }
+
 }
