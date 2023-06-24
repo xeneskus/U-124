@@ -39,6 +39,10 @@ public class PlayerMovements : MonoBehaviour
     public TrailRenderer tracerEffect;
     public Transform tracerStartPoint;
 
+    #region fire
+
+    #endregion
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -63,7 +67,7 @@ public class PlayerMovements : MonoBehaviour
             Jump();
             Invoke("ResetJump", jumpCooldown);
         }
-
+        #region Shotgun
         if (ShotgunBullet <= 0) { _handAnim.SetTrigger("Srelo"); ShotgunBullet = 2; }
 
         AnimatorStateInfo currentAnimationState = _handAnim.GetCurrentAnimatorStateInfo(0);
@@ -99,6 +103,8 @@ public class PlayerMovements : MonoBehaviour
                 }
             }
         }
+        #endregion
+
 
 
         SpeedController();
