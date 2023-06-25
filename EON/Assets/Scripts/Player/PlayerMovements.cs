@@ -43,6 +43,9 @@ public class PlayerMovements : MonoBehaviour
 
     #endregion
 
+    public float geriTepmeSpeed;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -79,10 +82,14 @@ public class PlayerMovements : MonoBehaviour
             Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             var tracer = Instantiate(tracerEffect, tracerStartPoint.position, Quaternion.identity);
             tracer.AddPosition(tracerStartPoint.position);
-
+            _handAnim.SetTrigger("FireShotgun");
             if (Physics.Raycast(fireRay, out fireHit))
             {
                 
+                Vector3 GeriMal = Camera.main.transform.forward * -1;
+                
+                rb.AddForce(GeriMal.normalized * geriTepmeSpeed, ForceMode.Impulse);
+
                 hitEffect.transform.position = fireHit.point;
                 hitEffect.transform.forward = fireHit.normal;
                 hitEffect.Emit(15);
@@ -105,7 +112,7 @@ public class PlayerMovements : MonoBehaviour
         }
         #endregion
 
-        var playerRifle = 1f;
+        
 
 
         SpeedController();
