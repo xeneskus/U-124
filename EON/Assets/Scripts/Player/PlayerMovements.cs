@@ -105,6 +105,7 @@ public class PlayerMovements : MonoBehaviour
         }
         #endregion
 
+        var playerRifle = 1f;
 
 
         SpeedController();
