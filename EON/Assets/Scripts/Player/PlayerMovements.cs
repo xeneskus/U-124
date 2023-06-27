@@ -32,6 +32,10 @@ public class PlayerMovements : MonoBehaviour
     public Animator _handAnim;
 
     private int ShotgunBullet = 2;
+    private int SmgBullet = 30;
+    private float _smgTime = 0;
+    private float _smgShootDelay = 0.15f;
+
 
     //fire effect
     public ParticleSystem muzzleFlash;
@@ -110,9 +114,49 @@ public class PlayerMovements : MonoBehaviour
                 }
             }
         }
+
+        if (SmgBullet <= 0) { _handAnim.SetTrigger("SMGrelo"); SmgBullet = 30; }
+        //print(_smgTime);
+        Debug.Log(_smgTime);
+        Debug.LogError(_smgShootDelay);
+        if (Input.GetMouseButton(0) && currentAnimationState.IsName("MachineGunIdl") && SmgBullet > 0 && Time.time >= _smgTime)
+        {
+            print(SmgBullet);
+            _smgTime = Time.time + _smgShootDelay;
+            SmgBullet--;
+            muzzleFlash.Emit(1);
+            //_handAnim.SetTrigger("SMGfire");
+            RaycastHit fireHit;
+            Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            var tracer = Instantiate(tracerEffect, tracerStartPoint.position, Quaternion.identity);
+            tracer.AddPosition(tracerStartPoint.position);
+            
+            if (Physics.Raycast(fireRay, out fireHit))
+            {
+                hitEffect.transform.position = fireHit.point;
+                hitEffect.transform.forward = fireHit.normal;
+                hitEffect.Emit(15);
+
+                tracer.transform.position = fireHit.point;
+                //Debug.DrawLine(muzzleFlash.transform.position, fireHit.transform.position, Color.red, 1f);
+                if (fireHit.transform.gameObject.tag == "Enemy")
+                {
+                    if (fireHit.transform.gameObject.GetComponent<Rigidbody>() == null) { Destroy(fireHit.transform.gameObject); }
+                    else
+                    {
+                        Vector3 knockDirection = fireHit.transform.position - transform.position;
+                        knockDirection.y = 0;
+
+                        Rigidbody enemyRb = fireHit.transform.gameObject.GetComponent<Rigidbody>();
+                        enemyRb.AddForce(knockDirection.normalized * knockBackStrength, ForceMode.Impulse);
+                    }
+                }
+            }
+            
+        }
         #endregion
 
-        
+
 
 
         SpeedController();
@@ -133,7 +177,7 @@ public class PlayerMovements : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            _handAnim.SetTrigger("deneme");
+            _handAnim.SetTrigger("SMGcreate");
         }
 
     }
