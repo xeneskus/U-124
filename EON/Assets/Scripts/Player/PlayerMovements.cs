@@ -50,6 +50,14 @@ public class PlayerMovements : MonoBehaviour
     public float geriTepmeSpeed;
 
 
+    //graplinggun var.
+    public bool freeze;
+    public bool activeGrapple;
+
+    
+    
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -117,8 +125,7 @@ public class PlayerMovements : MonoBehaviour
 
         if (SmgBullet <= 0) { _handAnim.SetTrigger("SMGrelo"); SmgBullet = 30; }
         //print(_smgTime);
-        Debug.Log(_smgTime);
-        Debug.LogError(_smgShootDelay);
+        
         if (Input.GetMouseButton(0) && currentAnimationState.IsName("MachineGunIdl") && SmgBullet > 0 && Time.time >= _smgTime)
         {
             print(SmgBullet);
@@ -156,7 +163,10 @@ public class PlayerMovements : MonoBehaviour
         }
         #endregion
 
-
+        if (freeze)
+        {
+            rb.velocity = Vector3.zero;
+        }
 
 
         SpeedController();
@@ -166,7 +176,7 @@ public class PlayerMovements : MonoBehaviour
         
 
         //surtunmeeeee
-        if (graunded)
+        if (graunded && !activeGrapple)
         {
             rb.drag = graundDrag;
         }
@@ -189,6 +199,8 @@ public class PlayerMovements : MonoBehaviour
 
     private void MovePlayer()
     {
+        if (activeGrapple) return;
+
         moveDirection = annen.forward * verticalInput + annen.right * horizontalInput;
 
         //yerdeyse
@@ -199,6 +211,8 @@ public class PlayerMovements : MonoBehaviour
 
     private void SpeedController()
     {
+        if (activeGrapple) return;
+
         Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         if (flatVel.magnitude > moveSpeed)
@@ -225,6 +239,58 @@ public class PlayerMovements : MonoBehaviour
         _handAnim.SetTrigger("Srelo");
         //ShotgunBullet = 2;
     }
-  
+
+    private bool enableMovementOnNextTouch;
+    public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
+    {
+        activeGrapple = true;
+
+        velocityToSet = CalculateJumpVelocity(transform.position, targetPosition, trajectoryHeight);
+        Invoke(nameof(SetVelocity), 0.1f);
+
+        Invoke(nameof(ResetRestrictions), 3f);
+    }
+
+    public void ResetRestrictions()
+    {
+        activeGrapple = false;
+        
+    }
+
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (enableMovementOnNextTouch)
+        {
+            enableMovementOnNextTouch = false;
+
+            ResetRestrictions();
+
+            GetComponent<Grappling>().StopGrapple();
+        }
+    }
+
+    private Vector3 velocityToSet;
+    private void SetVelocity()
+    {
+        enableMovementOnNextTouch = true;
+        rb.velocity = velocityToSet;
+
+        
+    }
+
+    public Vector3 CalculateJumpVelocity(Vector3 startPoint, Vector3 endPoint, float trajectoryHeight)
+    {
+        float gravity = Physics.gravity.y;
+        float displacementY = endPoint.y - startPoint.y;
+        Vector3 displacementXZ = new Vector3(endPoint.x - startPoint.x, 0f, endPoint.z - startPoint.z);
+
+        Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2.5f * gravity * trajectoryHeight);
+        Vector3 velocityXZ = displacementXZ / (Mathf.Sqrt(-2 * trajectoryHeight / gravity)
+            + Mathf.Sqrt(2 * (displacementY - trajectoryHeight) / gravity));
+
+        return velocityXZ + velocityY;
+    }
+
 
 }
