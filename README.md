@@ -59,7 +59,7 @@ SPRİNT REVİEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, En
 - **SPRİNT İÇİNDE TAMAMLANMASI TAHMİN EDİLEN PUAN:** 80 Puan
 - **USER STORYLER:** User Story'lerin her şey tamamlandıktan sonra girilmesi daha açıklayıcı olduğundan detaylı bir şekilde 3. Sprint sonunda girilmesine karar verilmiştir.
 
--**SPRİNT BOARD UPDATE:** Sprint Board Ekran Görüntüsü: ![image](https://github.com/xeneskus/U-124/assets/129379714/57ca765d-225a-43ff-bd76-16ca307c27a3)
+- **SPRİNT BOARD UPDATE:** Sprint Board Ekran Görüntüsü: ![image](https://github.com/xeneskus/U-124/assets/129379714/57ca765d-225a-43ff-bd76-16ca307c27a3)
 
 ## DAILY SCRUM
 - Daily Scrum toplantılarının tümünün zamansal sebepler ve bayram tatili dolayısıyla Whatsapp üzerinden yapılmasına karar verilmiştir.
@@ -68,4 +68,5 @@ SPRİNT REVİEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, En
 
 **SPRİNT REVIEW:** Planlanan görev dağılımına göre görevler yapılmaya devam edildi. </br>
 SPRİNT REVIEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, Enes Kuş, Oğuzhan Öztürk. </br>
+
 **SPRİNT RETROSPECTIVE:** Bayram tatili dolayısıyla iletişimde bazı eksiklikler yaşandı. Son sprintte daha kuvvetli iletişimde olmaya karar verildi.
