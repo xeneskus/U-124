@@ -52,4 +52,16 @@ https://github.com/xeneskus/U-124/assets/129379714/ffbd4990-7c59-47b6-8014-a3eb4
 SPRİNT REVİEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, Enes Kuş, Oğuzhan Öztürk. 
 - **SPRİNT RETROSPECTIVE:** Sınav dönemi olduğundan zamanımızın tamamını kullanamadığımız kanısına varıldı. Diğer sprintlerde zamanı daha verimli ve daha fazla kullanma kararı verildi.
 
+# SPRİNT 2
+- Mekan tasarımı için araştırmalar yapıldı.
+- Karakter tasarımı için araştırmalar yapıldı.
+- Programlama ve kodlamaya devam edildi.
+- **SPRİNT İÇİNDE TAMAMLANMASI TAHMİN EDİLEN PUAN:** 80 Puan
+
+-**SPRİNT BOARD UPDATE:** Sprint Board Ekran Görüntüsü: ![image](https://github.com/xeneskus/U-124/assets/129379714/57ca765d-225a-43ff-bd76-16ca307c27a3)
+
+## DAILY SCRUM
+- Daily Scrum toplantılarının tümünün zamansal sebepler ve bayram tatili dolayısıyla Whatsapp üzerinden yapılmasına karar verilmiştir.
+- Daily Scrum toplantısı örneği pdf olarak Readme'de tarafımızdan paylaşılmaktadır: 
+[Sprint2 DailyScrum.pdf](https://github.com/xeneskus/U-124/files/11931206/Sprint2.DailyScrum.pdf)
 
