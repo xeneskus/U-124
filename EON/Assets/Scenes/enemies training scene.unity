@@ -8471,7 +8471,7 @@ MonoBehaviour:
   maxGrappleDistance: 250
   grappleDelayTime: 0.25
   overshootYAxis: 3
-  grapplingCd: 2
+  grapplingCd: 1
   grappleKey: 323
 --- !u!1 &975661434
 GameObject:

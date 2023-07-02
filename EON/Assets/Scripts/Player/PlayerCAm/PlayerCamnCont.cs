@@ -20,7 +20,7 @@ public class PlayerCamnCont : MonoBehaviour
 
 
  
-    private void LateUpdate()
+    private void Update()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * _xSens;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * _ySens;
