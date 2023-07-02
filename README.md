@@ -56,6 +56,8 @@ SPRİNT REVİEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, En
 - Mekan tasarımı için araştırmalar yapıldı.
 - Karakter tasarımı için araştırmalar yapıldı.
 - Programlama ve kodlamaya devam edildi.
+- Level design yapıldı.
+- Düşmanlar yapıldı.
 - **SPRİNT İÇİNDE TAMAMLANMASI TAHMİN EDİLEN PUAN:** 80 Puan
 - **USER STORYLER:** User Story'lerin her şey tamamlandıktan sonra girilmesi daha açıklayıcı olduğundan detaylı bir şekilde 3. Sprint sonunda girilmesine karar verilmiştir.
 
