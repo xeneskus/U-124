@@ -187,8 +187,8 @@ public class PlayerMovements : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            //_handAnim.SetTrigger("SMGcreate");
-            _handAnim.SetTrigger("deneme");
+            _handAnim.SetTrigger("SMGcreate");
+            //_handAnim.SetTrigger("deneme");
         }
 
     }
