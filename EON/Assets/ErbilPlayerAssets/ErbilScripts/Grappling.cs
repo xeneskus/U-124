@@ -27,11 +27,16 @@ public class Grappling : MonoBehaviour
 
     private bool grappling;
 
+    //el
+    public GameObject _robotHand;
+    Vector3 handPos;
+
     
 
     private void Start()
     {
         pm = GetComponent<PlayerMovements>();
+        handPos = _robotHand.transform.position;
     }
 
     private void Update()
@@ -66,6 +71,11 @@ public class Grappling : MonoBehaviour
         if(Physics.Raycast(cam.position , cam.forward, out hit,maxGrappleDistance,whatIsGrappleable))
         {
             grapplePoint = hit.point;
+            
+            //var hand = Instantiate(_robotHand , new Vector3(hit.point.x , hit.point.y, hit.point.z) - new Vector3(0,100,0) , hit.transform.rotation);
+            //hand.transform.position = hit.point;
+            //Destroy(hand, 2);
+            _robotHand.SetActive(false);
 
             Invoke(nameof(ExecuteGrapple), grappleDelayTime);
         }
@@ -83,6 +93,8 @@ public class Grappling : MonoBehaviour
     private void ExecuteGrapple()
     {
         pm.freeze = false;
+
+        
 
         Vector3 lowestPoint = new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z);
 
@@ -105,6 +117,7 @@ public class Grappling : MonoBehaviour
         grapplingCdTimer = grapplingCd;
 
         lr.enabled = false;
+        _robotHand.SetActive(true);
     }
 
 

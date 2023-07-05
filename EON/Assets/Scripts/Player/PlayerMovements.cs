@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovements : MonoBehaviour
 {
+    private PlayerVar _playerVar;
+
+
     [Header("hareketEtKahpe")]
     public float moveSpeed;
 
@@ -54,7 +57,7 @@ public class PlayerMovements : MonoBehaviour
     public bool freeze;
     public bool activeGrapple;
 
-    
+    private float ShockTime = 2;
     
 
 
@@ -62,6 +65,7 @@ public class PlayerMovements : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        _playerVar = GetComponent<PlayerVar>();
     }
 
     void Update()
@@ -82,6 +86,16 @@ public class PlayerMovements : MonoBehaviour
             Jump();
             Invoke("ResetJump", jumpCooldown);
         }
+
+        ShockTime -= Time.deltaTime;
+        if (Input.GetMouseButtonDown(1) && ShockTime < 0 && _playerVar.curPil >= 25)
+        {
+            _handAnim.SetTrigger("ShockW");
+            Invoke("FireHandShockWawe", 0.5f);
+            ShockTime = 2;
+            _playerVar.UsePil(25);
+        }
+        
         #region Shotgun
         if (ShotgunBullet <= 0) { _handAnim.SetTrigger("Srelo"); ShotgunBullet = 2; }
 
@@ -131,7 +145,7 @@ public class PlayerMovements : MonoBehaviour
             print(SmgBullet);
             _smgTime = Time.time + _smgShootDelay;
             SmgBullet--;
-            muzzleFlash.Emit(1);
+            muzzleFlash.Emit(10);
             //_handAnim.SetTrigger("SMGfire");
             RaycastHit fireHit;
             Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
@@ -291,6 +305,35 @@ public class PlayerMovements : MonoBehaviour
             + Mathf.Sqrt(2 * (displacementY - trajectoryHeight) / gravity));
 
         return velocityXZ + velocityY;
+    }
+
+
+    public void FireHandShockWawe()
+    {
+        RaycastHit fireHit;
+        Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+                
+        if (Physics.Raycast(fireRay, out fireHit))
+        {
+
+            Vector3 GeriMal = Camera.main.transform.forward * -1;
+
+            rb.AddForce(GeriMal.normalized * geriTepmeSpeed, ForceMode.Impulse);
+
+
+            if (fireHit.transform.gameObject.tag == "Enemy")
+            {
+                if (fireHit.transform.gameObject.GetComponent<Rigidbody>() == null) { Destroy(fireHit.transform.gameObject); }
+                else
+                {
+                    Vector3 knockDirection = fireHit.transform.position - transform.position;
+                    knockDirection.y = 0;
+
+                    Rigidbody enemyRb = fireHit.transform.gameObject.GetComponent<Rigidbody>();
+                    enemyRb.AddForce(knockDirection.normalized * knockBackStrength, ForceMode.Impulse);
+                }
+            }
+        }
     }
 
 
