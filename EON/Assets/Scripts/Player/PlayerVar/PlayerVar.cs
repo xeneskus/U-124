@@ -31,9 +31,7 @@ public class PlayerVar : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) { TakeDamaga(10); }
-        if (Input.GetKeyDown(KeyCode.S)) { RegenHealth(10); }
-        if (Input.GetKeyDown(KeyCode.D)) { UseBullet(1); }
+        
     }
     public void TakeDamaga(int dmg)
     {

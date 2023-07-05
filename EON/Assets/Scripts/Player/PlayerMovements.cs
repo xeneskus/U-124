@@ -34,7 +34,7 @@ public class PlayerMovements : MonoBehaviour
 
     public Animator _handAnim;
 
-    private int ShotgunBullet = 2;
+    
     private int SmgBullet = 30;
     private float _smgTime = 0;
     private float _smgShootDelay = 0.15f;
@@ -70,6 +70,8 @@ public class PlayerMovements : MonoBehaviour
 
     void Update()
     {
+        
+
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
@@ -87,64 +89,30 @@ public class PlayerMovements : MonoBehaviour
             Invoke("ResetJump", jumpCooldown);
         }
 
+        
+        
+        #region Gun
+        
+
+        AnimatorStateInfo currentAnimationState = _handAnim.GetCurrentAnimatorStateInfo(0);
+
         ShockTime -= Time.deltaTime;
         if (Input.GetMouseButtonDown(1) && ShockTime < 0 && _playerVar.curPil >= 25)
         {
+            if (!currentAnimationState.IsName("IdlHand")) return;
             _handAnim.SetTrigger("ShockW");
             Invoke("FireHandShockWawe", 0.5f);
             ShockTime = 2;
             _playerVar.UsePil(25);
         }
-        
-        #region Shotgun
-        if (ShotgunBullet <= 0) { _handAnim.SetTrigger("Srelo"); ShotgunBullet = 2; }
-
-        AnimatorStateInfo currentAnimationState = _handAnim.GetCurrentAnimatorStateInfo(0);
-        if (Input.GetMouseButtonDown(0) && currentAnimationState.IsName("shotgun") && ShotgunBullet > 0)
-        {
-            ShotgunBullet--;
-            muzzleFlash.Emit(1);
-            RaycastHit fireHit;
-            Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            var tracer = Instantiate(tracerEffect, tracerStartPoint.position, Quaternion.identity);
-            tracer.AddPosition(tracerStartPoint.position);
-            _handAnim.SetTrigger("FireShotgun");
-            if (Physics.Raycast(fireRay, out fireHit))
-            {
-                
-                Vector3 GeriMal = Camera.main.transform.forward * -1;
-                
-                rb.AddForce(GeriMal.normalized * geriTepmeSpeed, ForceMode.Impulse);
-
-                hitEffect.transform.position = fireHit.point;
-                hitEffect.transform.forward = fireHit.normal;
-                hitEffect.Emit(15);
-
-                tracer.transform.position = fireHit.point;
-                //Debug.DrawLine(muzzleFlash.transform.position, fireHit.transform.position, Color.red, 1f);
-                if (fireHit.transform.gameObject.tag == "Enemy")
-                {
-                    if (fireHit.transform.gameObject.GetComponent<Rigidbody>() == null) { Destroy(fireHit.transform.gameObject); }
-                    else
-                    {
-                        Vector3 knockDirection = fireHit.transform.position - transform.position;
-                        knockDirection.y = 0;
-
-                        Rigidbody enemyRb = fireHit.transform.gameObject.GetComponent<Rigidbody>();
-                        enemyRb.AddForce(knockDirection.normalized * knockBackStrength, ForceMode.Impulse);
-                    }            
-                }
-            }
-        }
-
-        if (SmgBullet <= 0) { _handAnim.SetTrigger("SMGrelo"); SmgBullet = 30; }
+        //if (_playerVar._bulletVar <= 0) { _handAnim.SetTrigger("SMGrelo"); _playerVar._bulletVar = 30; } RELOAD
         //print(_smgTime);
-        
-        if (Input.GetMouseButton(0) && currentAnimationState.IsName("MachineGunIdl") && SmgBullet > 0 && Time.time >= _smgTime)
+
+        if (Input.GetMouseButton(0) && currentAnimationState.IsName("MachineGunIdl") && _playerVar._bulletVar > 0 && Time.time >= _smgTime)
         {
-            print(SmgBullet);
+            print(_playerVar._bulletVar);
             _smgTime = Time.time + _smgShootDelay;
-            SmgBullet--;
+            _playerVar.UseBullet(1);
             muzzleFlash.Emit(10);
             //_handAnim.SetTrigger("SMGfire");
             RaycastHit fireHit;
@@ -199,17 +167,25 @@ public class PlayerMovements : MonoBehaviour
             rb.drag = 0;
         }
 
+        //change Weapon
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            _handAnim.SetTrigger("SMGcreate");
-            //_handAnim.SetTrigger("deneme");
+            ChangeWeaponAS();
         }
+        
 
     }
 
     private void FixedUpdate()
     {
         MovePlayer();
+    }
+
+    private bool changeWeaponBool = false;
+    private void ChangeWeaponAS()
+    {
+        changeWeaponBool = !changeWeaponBool;
+        _handAnim.SetBool("chageWeapon", changeWeaponBool);
     }
 
     private void MovePlayer()
@@ -330,7 +306,7 @@ public class PlayerMovements : MonoBehaviour
                     knockDirection.y = 0;
 
                     Rigidbody enemyRb = fireHit.transform.gameObject.GetComponent<Rigidbody>();
-                    enemyRb.AddForce(knockDirection.normalized * knockBackStrength, ForceMode.Impulse);
+                    enemyRb.AddForce(knockDirection.normalized * 30, ForceMode.Impulse);
                 }
             }
         }
