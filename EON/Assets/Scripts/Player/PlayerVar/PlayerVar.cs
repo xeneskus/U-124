@@ -28,6 +28,7 @@ public class PlayerVar : MonoBehaviour
     private void Start()
     {
         curHealth = maxHealth;
+        _textBullet.text = _bulletVar.ToString();
     }
     private void Update()
     {
@@ -46,6 +47,7 @@ public class PlayerVar : MonoBehaviour
     {
         if (curHealth >= 100) return;
         curHealth += regen;
+        if(curHealth > 100) { curHealth = 100; }
         healtSlid.value = curHealth / 100;
         healthText.text = curHealth.ToString();
     }

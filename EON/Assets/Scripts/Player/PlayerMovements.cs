@@ -58,6 +58,10 @@ public class PlayerMovements : MonoBehaviour
     public bool activeGrapple;
 
     private float ShockTime = 2;
+
+    //hand and weapon Uý
+    public GameObject weaponImage;
+    public GameObject handImage;
     
 
 
@@ -181,11 +185,21 @@ public class PlayerMovements : MonoBehaviour
         MovePlayer();
     }
 
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (collision.transform.tag == "Collect/heart") { Destroy(collision.gameObject); _playerVar.RegenHealth(50); }
+        if (collision.transform.tag == "Collect/battery") { Destroy(collision.gameObject); _playerVar.TakePil(50); }
+        if (collision.transform.tag == "Collect/bullet") { Destroy(collision.gameObject); _playerVar.TakeBullet(20); }
+
+    }
+
     private bool changeWeaponBool = false;
     private void ChangeWeaponAS()
     {
         changeWeaponBool = !changeWeaponBool;
         _handAnim.SetBool("chageWeapon", changeWeaponBool);
+        if(handImage.activeSelf == true) { weaponImage.SetActive(true); handImage.SetActive(false); }else { weaponImage.SetActive(false); handImage.SetActive(true); }
+
     }
 
     private void MovePlayer()
