@@ -63,8 +63,11 @@ public class PlayerMovements : MonoBehaviour
     public GameObject weaponImage;
     public GameObject handImage;
     public ParticleSystem shockW;
-    
 
+    //Ses
+    public AudioSource shockSound;
+    public AudioSource machineGunSounds;
+    
 
     void Start()
     {
@@ -107,6 +110,7 @@ public class PlayerMovements : MonoBehaviour
             if (!currentAnimationState.IsName("IdlHand")) return;
             _handAnim.SetTrigger("ShockW");
             Invoke("FireHandShockWawe", 0.5f);
+            shockSound.Play();
             ShockTime = 2;
             _playerVar.UsePil(25);
         }
@@ -120,6 +124,7 @@ public class PlayerMovements : MonoBehaviour
             _playerVar.UseBullet(1);
             muzzleFlash.Emit(10);
             //_handAnim.SetTrigger("SMGfire");
+            machineGunSounds.Play();
             RaycastHit fireHit;
             Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
             var tracer = Instantiate(tracerEffect, tracerStartPoint.position, Quaternion.identity);

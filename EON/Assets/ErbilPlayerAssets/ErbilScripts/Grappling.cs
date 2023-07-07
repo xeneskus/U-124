@@ -31,7 +31,10 @@ public class Grappling : MonoBehaviour
     public GameObject _robotHand;
     Vector3 handPos;
 
-    
+    //ses
+    public AudioSource graplingSound;
+
+
 
     private void Start()
     {
@@ -62,7 +65,7 @@ public class Grappling : MonoBehaviour
     private void StartGrapple()
     {
         if (grapplingCdTimer > 0) return;
-
+        graplingSound.Play();
         grappling = true;
 
         pm.freeze = true;
