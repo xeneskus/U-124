@@ -62,6 +62,7 @@ public class PlayerMovements : MonoBehaviour
     //hand and weapon Uý
     public GameObject weaponImage;
     public GameObject handImage;
+    public ParticleSystem shockW;
     
 
 
@@ -300,6 +301,7 @@ public class PlayerMovements : MonoBehaviour
 
     public void FireHandShockWawe()
     {
+        shockW.Play();
         RaycastHit fireHit;
         Ray fireRay = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
                 

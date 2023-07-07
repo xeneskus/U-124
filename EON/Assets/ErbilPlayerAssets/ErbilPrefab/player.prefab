@@ -213,9 +213,12 @@ MonoBehaviour:
   tracerEffect: {fileID: 4445902086442376407, guid: 3c01e746cae778843814d6cf52bc64f3,
     type: 3}
   tracerStartPoint: {fileID: 0}
-  geriTepmeSpeed: 5
+  geriTepmeSpeed: 10
   freeze: 0
   activeGrapple: 0
+  weaponImage: {fileID: 0}
+  handImage: {fileID: 0}
+  shockW: {fileID: 0}
 --- !u!114 &8230893982924686511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +232,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  curHealth: 100
+  healtSlid: {fileID: 0}
+  healthText: {fileID: 0}
+  _bulletVar: 50
+  _textBullet: {fileID: 0}
+  maxPil: 100
+  curPil: 100
+  PilSlider: {fileID: 0}
 --- !u!114 &8230893982924686498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +263,7 @@ MonoBehaviour:
   overshootYAxis: 3
   grapplingCd: 1
   grappleKey: 323
+  _robotHand: {fileID: 0}
 --- !u!1 &8230893983056322848
 GameObject:
   m_ObjectHideFlags: 0
