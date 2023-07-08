@@ -67,7 +67,7 @@ public class PlayerMovements : MonoBehaviour
     //Ses
     public AudioSource shockSound;
     public AudioSource machineGunSounds;
-    
+    public AudioSource translateHandSound;
 
     void Start()
     {
@@ -204,7 +204,8 @@ public class PlayerMovements : MonoBehaviour
     {
         changeWeaponBool = !changeWeaponBool;
         _handAnim.SetBool("chageWeapon", changeWeaponBool);
-        if(handImage.activeSelf == true) { weaponImage.SetActive(true); handImage.SetActive(false); }else { weaponImage.SetActive(false); handImage.SetActive(true); }
+        translateHandSound.Play();
+        if (handImage.activeSelf == true) { weaponImage.SetActive(true); handImage.SetActive(false); }else { weaponImage.SetActive(false); handImage.SetActive(true); }
 
     }
 
