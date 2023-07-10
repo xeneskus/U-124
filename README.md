@@ -25,3 +25,31 @@ Dünya’yı ele geçiren yapay zekadan kaçarak uzaya giden bir insanlıktan ge
 - Cyberpunk oyunu sevenler
 ## Product Backlog URL
 https://trello.com/b/G0wkneiy/backlog
+
+# SPRİNT NOTLARI
+# SPRİNT 1
+- Discord üzerinden ilk toplantı yapıldı.
+- Takım adı, oyun adı ve oyun türü kararlaştırıldı.
+- Görev dağılımı yapıldı.
+- İlk toplantılarımızda aldığımız kararlar, 1. Sprint Buluşmasından topladığımız bilgiler ve kullanmayı planladığımız assetleri burada topladık: https://drive.google.com/drive/folders/1Qd2_-fmONLAA3M5KgsOHYwfV5sC-r-Ic?usp=drive_link 
+- Toplantıların çoğunun zamansal sebeplerden dolayı Whatsapp üzerinden yapılmasına karar verildi.
+- Karakterlerin temel hareketleri oluşturuldu.
+- **SPRİNT İÇİNDE TAMAMLANMASI TAHMİN EDİLEN PUAN:** 100 Puan
+- **PUAN TAMAMLAMA MANTIĞI:** Toplamda proje boyunca tamamlanması gereken 360 puanlık Backlog bulunmaktadır. 3 Sprint'e bölündüğünde ilk Sprint'in en azından 100 ile başlaması gerektiğine karar verildi. 1. Sprint'te tamamlanması gereken görevlerin puanları, Backlog görevlerinin açıklama kısmında belirtilmiştir.
+- **USER STORYLER:** Product Backlog'ların içine yazılmıştır. Diğer Sprintlerde detaylandırılacaktır.
+- Hangi görevi kimin veya kimlerin yapacağı Backlog'larda belirtilmiştir. 2 ve 3. Sprintlerdeki görev dağılımı bahsedilen Sprintlerin 'Sprint Planning' kısmında yapılacağından çoğunluğu henüz belirlenmemiştir. 
+- **BACKLOG DÜZENİ VE STORY SEÇİMLERİ:** Backlog'umuz tüm sprintlere göre düzenlenmiştir ancak gün geçtikçe detaylandırılacak ve kimin hangi görevi üstlendiği daha net anlaşılacaktır. Şu an için 1. Sprint'te tamamlananlar Backlog'umuzda bulunmaktadır. Sprint başına tahmin edilen puan sayısını geçmeyecek şekilde sıradan seçimler yapılmaktadır. Story başına çıkan tahmin puanı, toplam puanın yarısından az tutulmuştur.
+
+## DAILY SCRUM
+- Daily Scrum toplantılarının çoğunun zamansal sebeplerden dolayı Whatsapp üzerinden yapılmasına karar verilmiştir.
+- Daily Scrum toplantısı örneği pdf olarak Readme'de tarafımızdan paylaşılmaktadır: 
+[Sprint1 DailyScrum.pdf](https://github.com/xeneskus/U-124/files/11782581/Sprint1.DailyScrum.pdf)
+
+- **SPRİNT BOARD UPDATE:** Sprint Board Ekran Görüntüsü: ![image](https://github.com/xeneskus/U-124/assets/129379714/4c543576-e3a1-485d-a927-07e960837e8f)
+- **Ürün Durumu:** Şu ana kadar yapılan çalışmalardan örnek bir video tarafımızdan paylaşılmaktadır. Değiştirilme, ekleme yapılma, çıkarılma ihtimalleri bulunmaktadır.
+https://github.com/xeneskus/U-124/assets/129379714/ffbd4990-7c59-47b6-8014-a3eb4b1062c3
+- **SPRİNT REVIEW:** </br> ALINAN KARARLAR: Belirlenen görev dağılımlarının aynı şekilde devam etmesine karar verilmiştir. Product Owner ve Scrum Master'ın da oyun tasarımı ve kod yazmada yardımcı olmasına karar verilmiştir. </br> 
+SPRİNT REVİEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, Enes Kuş, Oğuzhan Öztürk. 
+- **SPRİNT RETROSPECTIVE:** Sınav dönemi olduğundan zamanımızın tamamını kullanamadığımız kanısına varıldı. Diğer sprintlerde zamanı daha verimli ve daha fazla kullanma kararı verildi.
+
+
