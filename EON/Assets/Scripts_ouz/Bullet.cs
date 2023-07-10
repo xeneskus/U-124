@@ -42,6 +42,6 @@ public class Bullet : MonoBehaviour
 
     void HitDamage()
     {
-        playerVarScript.TakeDamage(damage);
+        playerVarScript.TakeDamaga(damage);
     }
 }
