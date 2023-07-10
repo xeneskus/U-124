@@ -22,8 +22,8 @@ public class PlayerVar : MonoBehaviour
     [HideInInspector] public float curPil;
     public Slider PilSlider;
 
-    
-
+    //dmg yedigimizde bi UI img açýlýp kapanacak
+    public GameObject dmgedUIimg;
 
     private void Start()
     {
@@ -32,7 +32,7 @@ public class PlayerVar : MonoBehaviour
     }
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E)) { TakeDamaga(5); }
     }
     public void TakeDamaga(int dmg)
     {
@@ -41,6 +41,8 @@ public class PlayerVar : MonoBehaviour
         if(curHealth < 0) curHealth = 0;
         healtSlid.value = curHealth / 100;
         healthText.text = curHealth.ToString();
+        dmgedUIimg.SetActive(true);
+        Invoke("DmgedUiClosed", 0.2f);
     }
 
     public void RegenHealth(int regen)
@@ -80,6 +82,18 @@ public class PlayerVar : MonoBehaviour
         if(curPil > 100) curPil= 100;
         PilSlider.value = curPil / 100;
     }
+
+
+
+
+
+
+
+    public void DmgedUiClosed()
+    {
+        dmgedUIimg.SetActive(false);
+    }
+
 
 
 
