@@ -8,6 +8,7 @@ TagManager:
   - Collect/heart
   - Collect/battery
   - Collect/bullet
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Ground
   - Player
   - GunCam
-  - 
+  - Boss
   - 
   - 
   - 
