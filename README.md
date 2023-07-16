@@ -85,8 +85,10 @@ SPRİNT REVIEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, Ene
 - **Ürün Durumu:** Oyunumuzun 3. Sprint'te yapılan aşamalarından bazıları örnek olarak tarafımızdan paylaşılmaktadır. Ürün resimleri:
    ![WhatsApp Görsel 2023-07-16 saat 17 06 54](https://github.com/xeneskus/U-124/assets/129379714/1a502b1f-7a2b-4baa-93a8-9abf93338543)
   ![WhatsApp Görsel 2023-07-16 saat 17 06 54](https://github.com/xeneskus/U-124/assets/129379714/3097cc2a-20d5-458e-8bce-bfcca27d35b4)
-  Ürün videosu:
-https://github.com/xeneskus/U-124/assets/129379714/35fdf1a9-9c4a-4b00-90b1-f9f6be26bbb9
+  Ürün videoları:
+https://github.com/xeneskus/U-124/assets/129379714/35fdf1a9-9c4a-4b00-90b1-f9f6be26bbb9   </br>
+https://github.com/xeneskus/U-124/assets/129379714/579d186b-e8fb-452d-b61a-7e9168e6f042
+
 
 - **USER STORYLER:** ![image](https://github.com/xeneskus/U-124/assets/129379714/faf4b44c-87c3-44e7-8de6-7e1b14efb618)
 ## DAILY SCRUM
