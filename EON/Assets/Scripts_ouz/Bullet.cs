@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerVarScript = GameObject.Find("Player").GetComponent<PlayerVar>();
+        playerVarScript = GameObject.Find("player").GetComponent<PlayerVar>();
     }
 
     // Update is called once per frame
