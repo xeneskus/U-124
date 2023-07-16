@@ -96,4 +96,7 @@ https://github.com/xeneskus/U-124/assets/129379714/cfa0cbd6-e46f-43bd-ae83-19e5d
 - Daily Scrum toplantılarının tümünün zamansal sebeplerden dolayı Whatsapp üzerinden yapılmasına karar verilmiştir.
 - Daily Scrum toplantısı örneği pdf olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint3 DailyScrum.pdf](https://github.com/xeneskus/U-124/files/12064176/Sprint3.DailyScrum.pdf)
 
+**SPRİNT REVIEW:** Planlanan görev dağılımına göre aynı şekilde görevler yapılmaya devam edildi. </br>
+SPRİNT REVIEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, Enes Kuş, Oğuzhan Öztürk. </br>
 
+**SPRİNT RETROSPECTIVE:** Ürünü yetiştirmekte zorlandık. Bu gibi görevlerde, iş hayatında ve normal hayatta disiplinli, düzenli ve planlı çalışmanın önemini bir kez daha fark etmiş olduk.
