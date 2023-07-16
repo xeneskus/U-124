@@ -72,3 +72,20 @@ SPRİNT REVİEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, En
 SPRİNT REVIEW KATILIMCILARI: Ece Mısırlı, Hatice Nur İbiş, Enes Erbil, Enes Kuş, Oğuzhan Öztürk. </br>
 
 **SPRİNT RETROSPECTIVE:** Bayram tatili dolayısıyla iletişimde bazı eksiklikler yaşandı. Son sprintte daha kuvvetli iletişimde olmaya karar verildi.
+
+# SPRİNT 3
+- Bölüm tasarımı yapıldı.
+- Oyunun oynanacak duruma getirilmesi için uğraşıldı.
+- Oyun boyut uygunluğu ayarlandı.
+- User Interface tasarımı yapıldı.
+- Oyuna ses eklendi.
+- Oyunun ticarileştirme mekaniği konuşuldu.
+- **SPRİNT İÇİNDE TAMAMLANMASI TAHMİN EDİLEN PUAN:** 180 Puan
+- **SPRİNT BOARD UPDATE:** Sprint Board Ekran Görüntüsü: ![image](https://github.com/xeneskus/U-124/assets/129379714/d42b7d2e-3d0d-43c0-80f8-9463fa9e9189)
+- **Ürün Durumu:** Oyunumuzun 3. Sprint'te yapılan aşamalarından bazıları örnek olarak tarafımızdan paylaşılmaktadır. 
+- **USER STORYLER:** ![image](https://github.com/xeneskus/U-124/assets/129379714/faf4b44c-87c3-44e7-8de6-7e1b14efb618)
+## DAILY SCRUM
+- Daily Scrum toplantılarının tümünün zamansal sebeplerden dolayı Whatsapp üzerinden yapılmasına karar verilmiştir.
+- Daily Scrum toplantısı örneği pdf olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint3 DailyScrum.pdf](https://github.com/xeneskus/U-124/files/12064176/Sprint3.DailyScrum.pdf)
+
+
